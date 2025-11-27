@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pakistan Transport Company - Reliable & Safe Transport Services</title>
+    <title>Pakistan Transport Company - Reliable & Safe Car Services</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -101,24 +101,23 @@
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');
+            background: linear-gradient(rgba(46, 134, 193, 0.8), rgba(46, 134, 193, 0.7)), url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');
             background-size: cover;
             background-position: center;
             padding: 150px 0 100px;
             text-align: center;
+            color: white;
         }
         
         .hero h1 {
             font-size: 42px;
             margin-bottom: 20px;
-            color: var(--dark);
         }
         
         .hero p {
             font-size: 20px;
             max-width: 700px;
             margin: 0 auto 30px;
-            color: var(--text);
         }
         
         .cta-buttons {
@@ -140,24 +139,24 @@
         }
         
         .btn-primary {
-            background-color: var(--primary);
-            color: white;
+            background-color: white;
+            color: var(--primary);
         }
         
         .btn-primary:hover {
-            background-color: var(--primary-light);
+            background-color: var(--light);
             transform: translateY(-3px);
         }
         
         .btn-secondary {
-            background-color: white;
-            color: var(--primary);
-            border: 2px solid var(--primary);
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
         }
         
         .btn-secondary:hover {
-            background-color: var(--primary-light);
-            color: white;
+            background-color: white;
+            color: var(--primary);
             transform: translateY(-3px);
         }
         
@@ -300,6 +299,7 @@
             border-radius: 10px;
             box-shadow: var(--shadow);
             transition: var(--transition);
+            text-align: center;
         }
         
         .service-card:hover {
@@ -316,6 +316,76 @@
             font-size: 22px;
             margin-bottom: 15px;
             color: var(--dark);
+        }
+        
+        /* Car Fleet */
+        .fleet {
+            background-color: var(--light);
+        }
+        
+        .fleet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .car-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .car-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .car-image {
+            height: 180px;
+            overflow: hidden;
+        }
+        
+        .car-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .car-card:hover .car-image img {
+            transform: scale(1.1);
+        }
+        
+        .car-info {
+            padding: 20px;
+        }
+        
+        .car-info h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+        
+        .car-info p {
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+        
+        .car-features {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        
+        .car-feature {
+            display: flex;
+            align-items: center;
+        }
+        
+        .car-feature i {
+            color: var(--primary);
+            margin-right: 5px;
         }
         
         /* Forms */
@@ -400,41 +470,6 @@
             font-size: 28px;
             font-weight: bold;
             margin: 0 auto 20px;
-        }
-        
-        /* Team */
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        
-        .team-card {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-            text-align: center;
-        }
-        
-        .team-card img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-            border: 5px solid var(--light);
-        }
-        
-        .team-card h3 {
-            font-size: 20px;
-            margin-bottom: 5px;
-            color: var(--dark);
-        }
-        
-        .team-card p {
-            color: var(--text-light);
-            margin-bottom: 15px;
         }
         
         /* Testimonials */
@@ -649,13 +684,14 @@
         <div class="container">
             <nav class="navbar">
                 <div class="logo">
-                    <i class="fas fa-bus"></i>
+                    <i class="fas fa-car"></i>
                     <span class="logo-text">Pakistan Transport Company</span>
                 </div>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
+                    <li><a href="#fleet">Our Fleet</a></li>
                     <li><a href="#reservation">Reservation</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -669,7 +705,7 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
-            <h1>Reliable, Safe & On-Time Transport Services</h1>
+            <h1>Reliable, Safe & On-Time Car Services</h1>
             <p>Corporate pick & drop, staff transport, and tour bookings across Rawalpindi, Islamabad & Muzaffarabad.</p>
             <div class="cta-buttons">
                 <a href="#reservation" class="btn btn-primary">Book Now</a>
@@ -688,12 +724,12 @@
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Pakistan Transport Company provides professional, safe, and comfortable transportation solutions for companies and individuals. We offer daily staff pick & drop, corporate contracts, shift services, and tour bookings.</p>
+                    <p>Pakistan Transport Company provides professional, safe, and comfortable car transportation solutions for companies and individuals. We offer daily staff pick & drop, corporate contracts, shift services, and tour bookings.</p>
                     <p>With years of experience in the transportation industry, we have built a reputation for reliability and excellence. Our team is dedicated to ensuring your journey is comfortable, safe, and on time.</p>
                     <p><strong>Address:</strong> Bahria Town Phase 8, Rawalpindi</p>
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Transport Company">
+                    <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Transport Company">
                 </div>
             </div>
         </div>
@@ -706,12 +742,12 @@
                 <div class="mv-box">
                     <i class="fas fa-bullseye"></i>
                     <h3>Our Mission</h3>
-                    <p>To deliver safe, reliable, and comfortable transportation for companies and individuals through professional drivers and modern vehicles.</p>
+                    <p>To deliver safe, reliable, and comfortable car transportation for companies and individuals through professional drivers and modern vehicles.</p>
                 </div>
                 <div class="mv-box">
                     <i class="fas fa-eye"></i>
                     <h3>Our Vision</h3>
-                    <p>To become one of Pakistan's most trusted transport service providers, known for punctuality, safety, and customer satisfaction.</p>
+                    <p>To become one of Pakistan's most trusted car service providers, known for punctuality, safety, and customer satisfaction.</p>
                 </div>
             </div>
         </div>
@@ -743,7 +779,7 @@
                 <div class="value-card">
                     <i class="fas fa-couch"></i>
                     <h3>Comfort</h3>
-                    <p>Clean, maintained, air-conditioned vehicles for a pleasant journey.</p>
+                    <p>Clean, maintained, air-conditioned cars for a pleasant journey.</p>
                 </div>
                 <div class="value-card">
                     <i class="fas fa-users"></i>
@@ -759,7 +795,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>Our Services</h2>
-                <p>Comprehensive transportation solutions for all your needs</p>
+                <p>Comprehensive car transportation solutions for all your needs</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
@@ -797,9 +833,118 @@
                     <h3>City-to-City Travel</h3>
                     <p>Reliable intercity transportation services.</p>
                 </div>
+                <div class="service-card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>Wedding & Event Services</h3>
+                    <p>Elegant transportation for your special occasions.</p>
+                </div>
             </div>
             <div style="text-align: center; margin-top: 30px;">
                 <p><strong>Service Cities:</strong> Rawalpindi • Islamabad • Lahore • Muzaffarabad</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Car Fleet -->
+    <section class="fleet" id="fleet">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Car Fleet</h2>
+                <p>Modern, comfortable, and well-maintained vehicles for all your transportation needs</p>
+            </div>
+            <div class="fleet-grid">
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Sedan">
+                    </div>
+                    <div class="car-info">
+                        <h3>Sedan Cars</h3>
+                        <p>Comfortable 4-seater cars for business trips and small groups.</p>
+                        <div class="car-features">
+                            <div class="car-feature">
+                                <i class="fas fa-user"></i>
+                                <span>4 Seats</span>
+                            </div>
+                            <div class="car-feature">
+                                <i class="fas fa-snowflake"></i>
+                                <span>AC</span>
+                            </div>
+                            <div class="car-feature">
+                                <i class="fas fa-suitcase"></i>
+                                <span>2 Bags</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="SUV">
+                    </div>
+                    <div class="car-info">
+                        <h3>SUV Vehicles</h3>
+                        <p>Spacious 6-7 seater SUVs for families and small groups.</p>
+                        <div class="car-features">
+                            <div class="car-feature">
+                                <i class="fas fa-user"></i>
+                                <span>6-7 Seats</span>
+                            </div>
+                            <div class="car-feature">
+                                <i class="fas fa-snowflake"></i>
+                                <span>AC</span>
+                            </div>
+                            <div class="car-feature">
+                                <i class="fas fa-suitcase"></i>
+                                <span>4 Bags</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Van">
+                    </div>
+                    <div class="car-info">
+                        <h3>Premium Vans</h3>
+                        <p>Luxury vans for corporate transport and large groups.</p>
+                        <div class="car-features">
+                            <div class="car-feature">
+                                <i class="fas fa-user"></i>
+                                <span>10-12 Seats</span>
+                            </div>
+                            <div class="car-feature">
+                                <i class="fas fa-snowflake"></i>
+                                <span>AC</span>
+                            </div>
+                            <div class="car-feature">
+                                <i class="fas fa-suitcase"></i>
+                                <span>6 Bags</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Luxury">
+                    </div>
+                    <div class="car-info">
+                        <h3>Luxury Cars</h3>
+                        <p>Premium vehicles for special occasions and VIP transport.</p>
+                        <div class="car-features">
+                            <div class="car-feature">
+                                <i class="fas fa-user"></i>
+                                <span>4 Seats</span>
+                            </div>
+                            <div class="car-feature">
+                                <i class="fas fa-snowflake"></i>
+                                <span>AC</span>
+                            </div>
+                            <div class="car-feature">
+                                <i class="fas fa-suitcase"></i>
+                                <span>3 Bags</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -809,7 +954,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>Make a Reservation</h2>
-                <p>Book your transportation service with us today</p>
+                <p>Book your car service with us today</p>
             </div>
             <div class="form-container">
                 <form id="reservation-form">
@@ -875,7 +1020,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>How It Works</h2>
-                <p>Simple steps to book our transportation services</p>
+                <p>Simple steps to book our car services</p>
             </div>
             <div class="steps">
                 <div class="step">
@@ -886,17 +1031,47 @@
                 <div class="step">
                     <div class="step-number">2</div>
                     <h3>Choose Service</h3>
-                    <p>Select the service type and package that fits your needs</p>
+                    <p>Select the service type and car that fits your needs</p>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
-                    <h3>Vehicle Assignment</h3>
-                    <p>We assign the appropriate vehicle and professional driver</p>
+                    <h3>Car Assignment</h3>
+                    <p>We assign the appropriate car and professional driver</p>
                 </div>
                 <div class="step">
                     <div class="step-number">4</div>
                     <h3>Enjoy Your Ride</h3>
                     <p>Experience safe, smooth, and on-time transportation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Clients Say</h2>
+                <p>Feedback from our satisfied customers</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Excellent service! Always on time and very professional. The cars are clean and comfortable."
+                    </div>
+                    <div class="testimonial-author">- Corporate Client, Islamabad</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "We used their services for our company staff transportation. Reliable and punctual service. Highly recommended!"
+                    </div>
+                    <div class="testimonial-author">- Business Owner, Rawalpindi</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Took a family trip to Muzaffarabad with their SUV. Comfortable ride and professional driver. Will use again!"
+                    </div>
+                    <div class="testimonial-author">- Family Customer</div>
                 </div>
             </div>
         </div>
@@ -932,6 +1107,13 @@
                             <p>Bahria Town Phase 8, Rawalpindi</p>
                         </div>
                     </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Business Hours</h3>
+                            <p>24/7 Available</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="contact-form">
                     <form id="contact-form">
@@ -960,7 +1142,7 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>Pakistan Transport Company</h3>
-                    <p>Providing reliable, safe, and comfortable transportation services across Pakistan since 2010.</p>
+                    <p>Providing reliable, safe, and comfortable car transportation services across Pakistan since 2010.</p>
                 </div>
                 <div class="footer-column">
                     <h3>Quick Links</h3>
@@ -968,6 +1150,7 @@
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#services">Services</a></li>
+                        <li><a href="#fleet">Our Fleet</a></li>
                         <li><a href="#reservation">Reservations</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
